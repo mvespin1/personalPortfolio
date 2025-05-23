@@ -304,7 +304,7 @@ const VaultLoader = ({ onComplete }: VaultLoaderProps) => {
             
             {/* Centro del dial */}
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#FF5733] to-[#FF8C33]/80 flex items-center justify-center shadow-inner">
-              <div className="text-black text-xl font-bold tracking-wider">A.O</div>
+              <div className="text-black text-xl font-bold tracking-wider">M.E</div>
             </div>
           </div>
         </div>
