@@ -31,24 +31,11 @@ export default function Navbar() {
         {/* Aplicar estilos fijos, sin transición de scroll y quitar shadow-glow */}
         <nav className="navbar-container pointer-events-auto mt-3 py-2">
           <div className="pill-container glassmorphism rounded-full px-4 py-1.5 flex items-center justify-between">
-            
-            {/* Grupo de links izquierdo */}
-            <div className="flex items-center gap-2 sm:gap-4">
-              <Link href="#inicio" className="nav-link text-sm sm:text-base text-white/80 hover:text-white px-3 py-2 rounded-full transition-all duration-300">
-                Inicio
-              </Link>
-              <Link href="#servicios" className="nav-link text-sm sm:text-base text-white/80 hover:text-white px-3 py-2 rounded-full transition-all duration-300">
-                Servicios
-              </Link>
-              <Link href="#proceso" className="nav-link text-sm sm:text-base text-white/80 hover:text-white px-3 py-2 rounded-full transition-all duration-300">
-                Proceso
-              </Link>
-            </div>
-            
+
             {/* Logo central */}
             <div className="brand-container relative flex-shrink-0 mx-4 sm:mx-6">
               <Link href="/" className="flex items-center justify-center bg-gradient-to-r from-[#FF5733] to-[#FF8C33] rounded-full w-10 h-10 sm:w-12 sm:h-12 transform transition-transform hover:scale-110 shadow-glow">
-                <span className="text-black font-bold text-xl">AO</span>
+                <span className="text-black font-bold text-xl">ME</span>
               </Link>
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/30 to-[#FF5733]/30 rounded-full blur-sm opacity-70 -z-10 animate-pulse-slow"></div>
             </div>
@@ -61,9 +48,7 @@ export default function Navbar() {
               <Link href="#tecnologias" className="nav-link text-sm sm:text-base text-white/80 hover:text-white px-3 py-2 rounded-full transition-all duration-300">
                 Tecnologías
               </Link>
-              <Link href="#contacto" className="nav-link text-sm sm:text-base px-4 py-2 bg-gradient-to-r from-[#FF5733] to-[#FF8C33] text-black font-medium rounded-full transition-all duration-300 hover:shadow-glow">
-                Contacto
-              </Link>
+              
             </div>
           </div>
         </nav>

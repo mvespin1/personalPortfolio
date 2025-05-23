@@ -123,7 +123,7 @@ export default function BiographySection() {
             <h2 className="text-5xl md:text-6xl font-bold mb-5 leading-tight tracking-tight">
               <span className="text-gradient-orange-no-stroke">Acerca</span>{" "}
               <span 
-                className="relative inline-block" 
+                className="text-white" 
                 style={{ 
                   textShadow: '0 0 20px rgba(58, 134, 255, 0.3)'
                 }}
@@ -133,7 +133,7 @@ export default function BiographySection() {
               </span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl">
-              Desarrollador web y diseñador apasionado por la creación de experiencias digitales
+              Estudiante egresado de Ingeniería en TI con experiencia en desarrollo backend y arquitecturas escalables
             </p>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function BiographySection() {
               <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-[#FF5733]/30 via-[#3A86FF]/20 to-[#FF5733]/30 blur-md opacity-60"></div>
               <div className="relative aspect-square rounded-2xl overflow-hidden border border-white/10 transform preserve-3d">
                 <Image
-                  src="https://placehold.co/800x800/111/333?text=Profile+Photo"
+                  src="https://media.licdn.com/dms/image/v2/D4E03AQG8hYlm3Q3IIA/profile-displayphoto-shrink_800_800/B4EZXkugHZG0Ac-/0/1743299150801?e=1753315200&v=beta&t=zp5ujCZ7G8i71Wy6KrubY4QAITjWoX74kvjffoSnyCQ"
                   alt="Desarrollador"
                   fill
                   className="object-cover"
@@ -169,12 +169,12 @@ export default function BiographySection() {
               
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { name: "Desarrollo Frontend", level: 90, color: "#FF5733" },
-                  { name: "Diseño UI/UX", level: 85, color: "#3A86FF" },
-                  { name: "React / Next.js", level: 88, color: "#FF5733" },
-                  { name: "Node.js", level: 80, color: "#3A86FF" },
-                  { name: "TypeScript", level: 85, color: "#FF5733" },
-                  { name: "Bases de datos", level: 75, color: "#3A86FF" },
+                  { name: "Java Spring Boot", level: 85, color: "#FF5733" },
+                  { name: "Node.js/Express", level: 80, color: "#3A86FF" },
+                  { name: "React/Next.js", level: 75, color: "#FF5733" },
+                  { name: "Python", level: 70, color: "#3A86FF" },
+                  { name: "DevOps/CI-CD", level: 75, color: "#FF5733" },
+                  { name: "Bases de datos", level: 80, color: "#3A86FF" },
                 ].map((skill, index) => (
                   <div key={index} className="skill-item mb-5">
                     <div className="flex justify-between mb-1">
@@ -203,19 +203,24 @@ export default function BiographySection() {
             <div className="mb-12" ref={bioRef}>
               <div className="relative p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
                 <p className="text-lg leading-relaxed mb-6 text-gray-300">
-                  Soy un desarrollador web full-stack con más de 5 años de experiencia en la creación de aplicaciones web y móviles. Mi pasión es construir interfaces de usuario elegantes y funcionales que brinden experiencias excepcionales.
+                  Mi nombre es Marco Espín y soy un profesional entusiasta del área de Tecnologías de la Información, 
+                  con sólida experiencia en el desarrollo de software, especialmente en la construcción de soluciones 
+                  backend utilizando herramientas y tecnologías modernas.
                 </p>
                 <p className="text-lg leading-relaxed mb-6 text-gray-300">
-                  Especializado en React, Next.js y Node.js, he trabajado en diversos proyectos desde startups hasta empresas consolidadas, siempre buscando las mejores soluciones para cada necesidad.
+                  A lo largo de mi trayectoria, he participado en proyectos que combinan innovación y tecnología, 
+                  enfocándome en ofrecer soluciones eficientes, escalables y estructuradas desde su diseño. 
+                  Mi enfoque en la calidad del código y las buenas prácticas contribuye al desarrollo de soluciones mantenibles.
                 </p>
                 <p className="text-lg leading-relaxed mb-0 text-gray-300">
-                  Mi enfoque es combinar código limpio con diseño atractivo para crear productos digitales que no solo funcionen perfectamente sino que también sean visualmente impactantes y fáciles de usar.
+                  Me defino como una persona curiosa, adaptable a nuevas herramientas, y con facilidad para integrarme 
+                  en equipos de trabajo. Me motiva el aprendizaje constante y el perfeccionamiento de mis habilidades técnicas, 
+                  especialmente en IA generativa y arquitecturas modulares.
                 </p>
 
-                {/* Firma */}
                 <div className="mt-8 flex items-center">
                   <div className="mr-4 h-px w-12 bg-gradient-to-r from-[#FF5733] to-transparent"></div>
-                  <p className="text-xl font-signature text-white">Juan Carlos Rodríguez</p>
+                  <p className="text-xl font-signature text-white">Marco Espín</p>
                 </div>
                 
                 {/* Decoración */}
@@ -224,37 +229,42 @@ export default function BiographySection() {
               </div>
             </div>
 
-            {/* Línea de tiempo / experiencia */}
+            {/* Línea de tiempo / educación y experiencia */}
             <div ref={timelineRef}>
               <h3 className="text-2xl font-bold mb-8 flex items-center">
                 <span className="w-8 h-px bg-gradient-to-r from-[#FF5733] to-transparent mr-3"></span>
-                Experiencia
+                Educación y Experiencia
               </h3>
               
               <div className="relative pl-8 border-l border-white/10">
                 {[
                   {
-                    period: "2022 - Presente",
-                    role: "Desarrollador Senior Frontend",
-                    company: "TechSolutions Inc.",
-                    description: "Líder de equipo para desarrollo de aplicaciones SPA con React y Next.js. Implementación de arquitecturas escalables y optimización de rendimiento."
+                    period: "2020 - 2025",
+                    role: "Ingeniería en Tecnologías de la Información",
+                    company: "Universidad de las Fuerzas Armadas ESPE",
+                    description: "Participación en proyectos de investigación y desarrollo de software.",
+                    type: "education"
                   },
                   {
-                    period: "2020 - 2022",
-                    role: "Desarrollador Full Stack",
-                    company: "InnovateX",
-                    description: "Desarrollo de plataformas web con Node.js y React. Responsable de integraciones con APIs y servicios de terceros."
+                    period: "2013 - 2019", 
+                    role: "Bachillerato General Unificado",
+                    company: "Unidad Educativa \"Paulo VI\"",
+                    description: "Formación académica secundaria con enfoque integral.",
+                    type: "education"
                   },
                   {
-                    period: "2018 - 2020",
-                    role: "Desarrollador Frontend",
-                    company: "WebCreative Studio",
-                    description: "Creación de interfaces de usuario para sitios web y aplicaciones de comercio electrónico."
+                    period: "Marzo 2024 - Mayo 2024",
+                    role: "Desarrollador de Pruebas de Software",
+                    company: "Ministerio del Deporte del Ecuador",
+                    description: "Elaboración, desarrollo e implementación de un plan de pruebas de software en el área de Tecnologías de la Información del Ministerio del Deporte del Ecuador, utilizando estrategias de prueba estructuradas e integrándolo dentro del proceso de desarrollo propio del Ministerio, conforme a su metodología de desarrollo de software.",
+                    type: "experience"
                   }
                 ].map((item, index) => (
                   <div key={index} className="timeline-item mb-12 relative">
-                    <div className="absolute -left-12 top-0 w-5 h-5 rounded-full border-2 border-[#FF5733] bg-black"></div>
-                    <span className="text-sm text-[#3A86FF] font-medium tracking-wider">{item.period}</span>
+                    <div className={`absolute -left-12 top-0 w-5 h-5 rounded-full border-2 bg-black ${item.type === 'education' ? 'border-[#3A86FF]' : 'border-[#FF5733]'}`}></div>
+                    <span className={`text-sm font-medium tracking-wider ${item.type === 'education' ? 'text-[#3A86FF]' : 'text-[#FF5733]'}`}>
+                      {item.period} • {item.type === 'education' ? 'Educación' : 'Experiencia'}
+                    </span>
                     <h4 className="text-xl font-bold mt-1 mb-1 text-white">{item.role}</h4>
                     <h5 className="text-lg text-gray-300 mb-3">{item.company}</h5>
                     <p className="text-gray-400">{item.description}</p>
@@ -262,23 +272,7 @@ export default function BiographySection() {
                 ))}
               </div>
             </div>
-            
-            {/* Botón de descarga CV */}
-            <div className="mt-12 flex justify-start">
-              <a 
-                href="#" 
-                className="relative inline-flex items-center px-6 py-3 rounded-full overflow-hidden group"
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-[#FF5733] to-[#3A86FF] opacity-70"></span>
-                <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition-all duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-[#3A86FF] opacity-30 group-hover:rotate-90 ease-out"></span>
-                <span className="relative flex items-center text-white font-medium">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                  </svg>
-                  Descargar CV
-                </span>
-              </a>
-            </div>
+          
           </div>
         </div>
       </div>

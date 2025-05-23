@@ -27,50 +27,23 @@ export default function ProjectsSection() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Plataforma E-learning",
-      description: "Sistema de aprendizaje online con cursos interactivos, seguimiento de progreso y certificaciones para estudiantes.",
-      technologies: ["React", "Node.js", "MongoDB", "AWS"],
-      image: "https://placehold.co/800x500/111/333?text=E-learning+Platform",
-      link: "#",
+      title: "BRAMAR - Lenguaje de Programación Multinúcleo",
+      description: "Desarrollo de un lenguaje de programación enfocado en concurrencia automática usando C y Rust, con sintaxis similar a Python para manejo de tareas concurrentes desde el compilador.",
+      technologies: ["Rust", "C", "Compiladores", "Concurrencia"],
+      image: "https://placehold.co/800x500/111/333?text=BRAMAR+Language",
+      link: "https://github.com/mvespin1/TESIS_BRAMAR",
       color: "#FF5733",
       featured: true
     },
     {
       id: 2,
-      title: "Aplicación de Gestión Financiera",
-      description: "Dashboard para control y análisis de gastos con visualizaciones avanzadas y reportes personalizados.",
-      technologies: ["Vue.js", "TypeScript", "Firebase", "D3.js"],
-      image: "https://placehold.co/800x500/111/333?text=Finance+App",
-      link: "#",
-      color: "#3A86FF"
-    },
-    {
-      id: 3,
-      title: "Sistema de Reservas",
-      description: "Plataforma para gestión de reservas en tiempo real con calendario interactivo y notificaciones automáticas.",
-      technologies: ["React Native", "GraphQL", "PostgreSQL", "Docker"],
-      image: "https://placehold.co/800x500/111/333?text=Booking+System",
-      link: "#",
-      color: "#FF5733"
-    },
-    {
-      id: 4,
-      title: "E-commerce Personalizado",
-      description: "Tienda online con experiencia de usuario optimizada, pasarelas de pago integradas y gestión de inventario.",
-      technologies: ["Next.js", "Redux", "Stripe", "Sanity CMS"],
-      image: "https://placehold.co/800x500/111/333?text=E-commerce",
-      link: "#",
+      title: "Infraestructura como Código con Terraform",
+      description: "Configuración y gestión de infraestructura cloud utilizando Terraform para automatización de despliegues y gestión de recursos AWS.",
+      technologies: ["Terraform", "AWS", "DevOps", "IaC"],
+      image: "https://placehold.co/800x500/111/333?text=Terraform+Infrastructure",
+      link: "https://github.com/mvespin1/terraformCode",
       color: "#3A86FF",
       featured: true
-    },
-    {
-      id: 5,
-      title: "App de Productividad",
-      description: "Aplicación para gestión de tareas con Pomodoro integrado, análisis de productividad y sincronización multiplataforma.",
-      technologies: ["Flutter", "Firebase", "TensorFlow", "Google Cloud"],
-      image: "https://placehold.co/800x500/111/333?text=Productivity+App",
-      link: "#",
-      color: "#FF5733"
     }
   ];
 
@@ -175,10 +148,10 @@ export default function ProjectsSection() {
                 Mis
                 <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FF5733]/60 to-transparent"></span>
               </span>{" "}
-              <span className="text-gradient-blue-no-stroke">Proyectos</span>
+              <span className="text-white">Proyectos</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl">
-              Soluciones innovadoras y experiencias digitales de alto impacto
+              Proyectos de desarrollo backend, DevOps e investigación en lenguajes de programación
             </p>
           </div>
         </div>
@@ -398,22 +371,7 @@ export default function ProjectsSection() {
             ))}
           </div>
         </div>
-        
-        {/* CTA final */}
-        <div className="mt-20 text-center">
-          <div className="relative inline-block">
-            <div className="absolute -inset-1 rounded-full blur-md" style={{ background: 'linear-gradient(90deg, #FF5733, #3A86FF)' }}></div>
-            <a 
-              href="#contact" 
-              className="relative z-10 inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#FF5733] to-[#3A86FF] rounded-full font-medium text-white shadow-lg"
-            >
-              ¿Interesado en colaborar?
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </a>
-          </div>
-        </div>
+      
       </div>
     </section>
   );

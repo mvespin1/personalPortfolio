@@ -24,14 +24,6 @@ export default function HobbiesSection() {
   const hobbies: Hobby[] = [
     {
       id: 1,
-      title: "Fotografía",
-      icon: "📷",
-      description: "Me encanta capturar momentos únicos a través de mi lente. La fotografía me permite expresar mi creatividad y ver el mundo desde diferentes perspectivas.",
-      image: "https://placehold.co/600x400/222/666?text=Fotografía",
-      color: "#FF5733"
-    },
-    {
-      id: 2,
       title: "Senderismo",
       icon: "🏔️",
       description: "Explorar la naturaleza y descubrir nuevos paisajes me llena de energía. El senderismo me permite desconectar de la tecnología y reconectar conmigo mismo.",
@@ -39,15 +31,7 @@ export default function HobbiesSection() {
       color: "#3A86FF"
     },
     {
-      id: 3,
-      title: "Ajedrez",
-      icon: "♟️",
-      description: "El ajedrez ejercita mi mente y mejora mi capacidad de planificación estratégica, habilidades que aplico también en mi trabajo como desarrollador.",
-      image: "https://placehold.co/600x400/222/666?text=Ajedrez",
-      color: "#FF9F1C"
-    },
-    {
-      id: 4,
+      id: 2,
       title: "Música",
       icon: "🎸",
       description: "Tocar guitarra es mi forma favorita de relajarme. La música me ayuda a encontrar nuevas formas de creatividad y expresión personal.",
@@ -55,20 +39,20 @@ export default function HobbiesSection() {
       color: "#7D4EE7"
     },
     {
-      id: 5,
-      title: "Cocina",
-      icon: "👨‍🍳",
-      description: "Experimentar con nuevos sabores y técnicas culinarias es otra de mis pasiones. Cocinar me permite ser creativo y compartir experiencias con amigos y familia.",
-      image: "https://placehold.co/600x400/222/666?text=Cocina",
-      color: "#06D6A0"
-    },
-    {
-      id: 6,
+      id: 3,
       title: "Lectura",
       icon: "📚",
       description: "Los libros son una fuente inagotable de conocimiento e inspiración. Me encanta sumergirme en nuevos mundos a través de la ciencia ficción y la literatura técnica.",
       image: "https://placehold.co/600x400/222/666?text=Lectura",
       color: "#3A86FF"
+    },
+    {
+      id: 4,
+      title: "Fútbol",
+      icon: "⚽",
+      description: "El fútbol es mi deporte favorito tanto para jugar como para ver. Me apasiona la estrategia del juego y la camaradería en equipo. Disfruto siguiendo tanto el fútbol local como internacional.",
+      image: "https://placehold.co/600x400/222/666?text=Fútbol",
+      color: "#FF5733"
     }
   ];
 
@@ -157,7 +141,7 @@ export default function HobbiesSection() {
               <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FF5733]/60 to-transparent"></span>
             </span>
             {" "}
-            <span className="text-gradient-blue-no-stroke">Pasiones</span>
+            <span className="text-white">Pasiones</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl">
             Lo que me apasiona más allá del código

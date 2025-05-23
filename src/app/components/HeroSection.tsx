@@ -192,9 +192,10 @@ export default function HeroSection() {
       if (typedRef.current) {
         const typedInstance = new Typed(typedRef.current, {
           strings: [
-            'Soy <span class="text-gradient-orange-no-stroke font-semibold">Andrés Ortiz</span>, desarrollador fullstack (React, Next.js, Node.js, Java Spring Boot, Python) con pasión por el diseño frontend y la IA generativa (LLMs).',
-            'Creando interfaces atractivas con React y Next.js, y APIs robustas con Node.js y Spring Boot.',
-            'Explorando el potencial de la IA generativa y los LLMs para soluciones innovadoras.'
+            'Soy <span class="text-gradient-orange-no-stroke font-semibold">Marco Espín</span>, desarrollador fullstack especializado en backend con Java Spring Boot, Node.js, React, Next.js, Python y Go.',
+            'Apasionado por crear arquitecturas de software escalables y soluciones backend robustas con tecnologías modernas.',
+            'Explorando el potencial de la IA generativa, LLMs, RAG y arquitecturas modulares para soluciones innovadoras.',
+            'Experiencia en DevOps, CI/CD, Docker, AWS, Terraform y bases de datos relacionales y no relacionales.'
           ],
           typeSpeed: 30,
           backSpeed: 15,
@@ -329,29 +330,18 @@ export default function HeroSection() {
           <div className="w-full lg:w-1/2 max-w-xl xl:max-w-3xl flex-shrink-0 pl-4 md:pl-8">
             <div className="text-center lg:text-left">
               <div ref={badgeRef} className="inline-block bg-gradient-to-r from-[#FF5733] to-[#FF8C33] text-black text-sm font-bold px-4 py-1 rounded-full mb-8 shadow-glow">
-                Fullstack · IA Generativa
+                Backend · Frontend · IA Generativa
               </div>
               
               <h1 ref={headingRef} className="text-6xl sm:text-7xl md:text-8xl font-bold leading-normal mb-8 tracking-tight cursor-pointer font-komikax overflow-visible">
-                <span className="text-gradient-orange inline-block my-2 px-2 ml-1">¿BUSCAS</span>
-                <span className="text-gradient-white inline-block my-2 px-2">INNOVACIÓN?</span>
+                <span className="text-gradient-orange inline-block my-2 px-2 ml-1">MARCO       </span>
+                <span className="text-gradient-white inline-block my-2 px-2">ESPIN</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl min-h-[80px]">
                 <span ref={typedRef}></span>
               </p>
               
-              <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="contact-button relative overflow-hidden group bg-gradient-to-r from-[#FF5733] to-[#FF8C33] text-black font-bold px-10 py-4 rounded-full shadow-glow transition-all duration-300 hover:shadow-glow-intense">
-                  <span className="relative z-10">Contactar</span>
-                  <span className="absolute inset-0 w-full h-full bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
-                  <span className="btn-glow"></span>
-                </button>
-                <button className="relative overflow-hidden group bg-transparent border border-white/20 text-white font-bold px-10 py-4 rounded-full hover:border-white/40 transition-all duration-300">
-                  <span className="relative z-10">Ver portafolio</span>
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#FF5733]/20 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
-                </button>
-              </div>
             </div>
           </div>
 
@@ -382,7 +372,7 @@ export default function HeroSection() {
         </div>
         
         <div className="absolute bottom-10 right-10 text-sm text-white/50 z-20">
-          <p>Andrés Ortiz</p>
+          <p>Marco Espín</p>
         </div>
 
         {/* Contenedor para los rayos - Añadido ref */}

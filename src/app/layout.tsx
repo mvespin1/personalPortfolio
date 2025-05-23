@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Andrés Ortiz | Desarrollador Fullstack & IA",
-  description: "Portafolio profesional de Andrés Ortiz, desarrollador fullstack especializado en IA generativa y soluciones web innovadoras",
-  keywords: ["desarrollador fullstack", "portfolio", "ia generativa", "web", "tecnología"],
+  title: "Marco Espín | Desarrollador Backend & IA Generativa",
+  description: "Portafolio profesional de Marco Espín, desarrollador backend especializado en Java Spring Boot, Node.js, DevOps y soluciones de IA generativa",
+  keywords: ["desarrollador backend", "java spring boot", "nodejs", "devops", "ia generativa", "portfolio", "ecuador"],
 };
 
 export default function RootLayout({
