@@ -1,0 +1,557 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Komikax';
+  src: url('/fonts/KOMIKAX_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --font-komikax: 'Komikax', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Grid background */
+.grid-bg {
+  background-size: 80px 80px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.12) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 2px, transparent 2px);
+}
+
+/* Beam rays effect */
+.beam {
+  position: absolute;
+  width: 120px;
+  height: 140vh;
+  transform-origin: center;
+  opacity: 0.3;
+  filter: blur(50px);
+  background: linear-gradient(90deg, transparent, rgba(114, 137, 250, 0.6), transparent);
+  mix-blend-mode: screen;
+}
+
+.beam-1 {
+  top: -10%;
+  left: 15%;
+  transform: rotate(35deg);
+  animation: beam-move 25s ease-in-out infinite;
+}
+
+.beam-2 {
+  top: 30%;
+  right: 20%;
+  transform: rotate(-45deg);
+  animation: beam-move 30s ease-in-out infinite 5s;
+}
+
+.beam-3 {
+  bottom: 5%;
+  left: 30%;
+  transform: rotate(15deg);
+  animation: beam-move 35s ease-in-out infinite 8s;
+}
+
+.beam-4 {
+  top: 20%;
+  right: 40%;
+  transform: rotate(-25deg);
+  animation: beam-move 28s ease-in-out infinite 12s;
+}
+
+@keyframes beam-move {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0) rotate(var(--rotate, 35deg));
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-20vh) rotate(var(--rotate, 35deg));
+  }
+}
+
+/* Wave animation */
+.wave-animation {
+  background: linear-gradient(
+    45deg,
+    transparent 10%,
+    rgba(255, 87, 51, 0.03) 50%, 
+    transparent 90%
+  );
+  background-size: 200% 200%;
+  animation: wave 15s ease infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Light effect */
+.light-effect {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  animation: pulse-light 10s ease-in-out infinite;
+}
+
+@keyframes pulse-light {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+}
+
+/* Text Gradients */
+.text-gradient-white {
+  @apply bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent;
+  padding: 0.05em;
+  margin: 0 -0.05em;
+  display: inline-block;
+  -webkit-text-stroke: 1.5px #000000;
+}
+
+.text-gradient-orange {
+  @apply bg-gradient-to-b from-[#FF8C33] to-[#FF5733] bg-clip-text text-transparent;
+  padding: 0.05em;
+  margin: 0 -0.05em;
+  display: inline-block;
+  -webkit-text-stroke: 1.5px #000000;
+}
+
+.text-gradient-orange-no-stroke {
+  @apply bg-gradient-to-b from-[#FF8C33] to-[#FF5733] bg-clip-text text-transparent;
+  padding: 0.05em;
+  margin: 0 -0.05em;
+  display: inline-block;
+}
+
+/* Glowing shadow */
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(255, 87, 51, 0.5);
+}
+
+.shadow-glow-intense {
+  box-shadow: 0 0 20px rgba(255, 87, 51, 0.8);
+}
+
+/* Contactar Button Glow Effect */
+.contact-button {
+  position: relative;
+}
+
+.contact-button .btn-glow {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 28px;
+  background: linear-gradient(90deg, rgba(255, 87, 51, 0.8), rgba(255, 140, 51, 0.8), rgba(255, 87, 51, 0.8));
+  background-size: 200% 200%;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  animation: border-glow 3s linear infinite;
+}
+
+.contact-button:hover .btn-glow {
+  opacity: 1;
+}
+
+/* Navbar styles */
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.pill-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glassmorphism effect */
+.glassmorphism {
+  background: rgba(7, 10, 23, 0.6);
+  backdrop-filter: blur(10px);
+  border: none;
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.2) inset;
+  position: relative;
+}
+
+/* Borde metalizado con gradiente */
+.glassmorphism::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px; /* Grosor del borde */
+  border-radius: 9999px; /* Para mantener la forma pill */
+  background: linear-gradient(
+    135deg, 
+    rgba(114, 137, 218, 0.6) 0%, 
+    rgba(80, 100, 170, 0.3) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(80, 100, 170, 0.3) 75%, 
+    rgba(114, 137, 218, 0.6) 100%
+  );
+  background-size: 300% 300%;
+  animation: rotate-border 8s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes rotate-border {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 300% 300%;
+  }
+}
+
+/* Brillo adicional para el borde para efecto metalizado */
+.glassmorphism::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  filter: blur(1px);
+  opacity: 0.7;
+}
+
+/* Animación para los enlaces */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FF5733, #FF8C33);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+  opacity: 0;
+  border-radius: 4px;
+}
+
+.nav-link:hover::before {
+  width: 60%;
+  opacity: 1;
+}
+
+.nav-link:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* Background gradients */
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Animación de pulso brillante para el loader */
+.glow-pulse {
+  position: relative;
+}
+
+.glow-pulse::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #FF5733, #FF8C33);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(15px);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.5;
+    filter: blur(15px);
+  }
+  100% {
+    opacity: 0.8;
+    filter: blur(20px);
+  }
+}
+
+/* Estilos para las líneas de código estilo matrix */
+.code-stream-line {
+  animation: fadeIn 0.3s ease-out;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sombra interna para el dial */
+.shadow-inner {
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-family: var(--font-komikax);
+}
+
+/* Añadir animación para gradient-x */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Animación de ping más lenta para elementos decorativos */
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Estilos para line-clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Estilos para tarjetas y sombras */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Estilos específicos para el marquee */
+.tech-row {
+  will-change: transform;
+}
+
+/* Para corregir el error de tipado en el SVG de GitHub */
+/* Corregir texto cortado en copypaste de path */
+path {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+/* Animación para elementos al hacer scroll */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación para elementos que aparecen desde la izquierda */
+.reveal-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-from-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animación para elementos que aparecen desde la derecha */
+.reveal-from-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-from-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animación para elementos con zoom */
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-zoom.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animación para elementos con delay */
+.reveal-delay-200 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-400 {
+  transition-delay: 0.4s;
+}
+
+.reveal-delay-600 {
+  transition-delay: 0.6s;
+}
+
+/* Estilizar la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #FF5733, #FF8C33);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #FF8C33, #FF5733);
+}
+
+/* Ajustar el estilo del scrollbar para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #FF5733 #0a0a0a;
+}
